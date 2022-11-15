@@ -1,7 +1,7 @@
 
-BMS-13: Create system architecture diagram.
+DONE - BMS-13: Create system architecture diagram.
 
-BMS-14: Create database diagram.
+DONE - BMS-14: Create database diagram.
 
 BMS-15: Add Hibernate configuration (pom and utils).
 
