@@ -30,4 +30,5 @@ public class SessionManager extends AbstractSessionManager {
         configuration.addAnnotatedClass(BookReview.class);
     }
 
+
 }
