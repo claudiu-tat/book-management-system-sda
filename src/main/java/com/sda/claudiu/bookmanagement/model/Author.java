@@ -18,8 +18,7 @@ public class Author {
     /* not required in the current specification
     @OneToMany(mappedBy = "author")
     private List<Book> books; */
-    public Author() {
-    }
+    public Author() {}
 
     public Author(String firstName, String lastName) {
         this.firstName = firstName;
