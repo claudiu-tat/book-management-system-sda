@@ -12,5 +12,5 @@ public interface BaseRepository<T> {
 
     void delete(T entity);
 
-   // List<T> findAll();
+    List<T> findAll();
 }

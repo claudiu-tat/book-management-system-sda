@@ -4,6 +4,8 @@ import com.sda.claudiu.bookmanagement.model.Author;
 import com.sda.claudiu.bookmanagement.repository.AuthorRepository;
 import com.sda.claudiu.bookmanagement.service.exceptions.InvalidParameterException;
 
+import java.util.List;
+
 public class AuthorServiceImpl implements AuthorService{
     private final AuthorRepository authorRepository;
 
@@ -21,6 +23,11 @@ public class AuthorServiceImpl implements AuthorService{
         }
 
         authorRepository.create(new Author(firstName, lastName));
+    }
+
+    @Override
+    public List<Author> getAllAuthors() {
+        return authorRepository.findAll();
     }
 
 }
