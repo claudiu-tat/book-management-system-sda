@@ -22,7 +22,7 @@ of the author first name and last name. The system should validate the first nam
 
 DONE - BMS-4: As a user I should be able to delete an existing author by providing the id of the author that should be deleted.
 
-BMS-5: As a user I should be able to add a new book in the system by providing the book title, description and author id.
+DONE - BMS-5: As a user I should be able to add a new book in the system by providing the book title, description and author id.
 The system should validate the book title and description to not be empty or blank. The system should generate a
 new unique identification number. In case author id doesn't exist in the system, the system will show an error message.
 

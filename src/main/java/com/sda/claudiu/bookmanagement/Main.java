@@ -46,6 +46,9 @@ public class Main {
                 case CREATE_BOOK:
                     bookController.createBook();
                     break;
+                case SHOW_ALL_BOOKS:
+                    bookController.showAllBooks();
+                    break;
                 case EXIT:
                     System.out.println("Good bye!");
                     break;

@@ -7,6 +7,7 @@ import com.sda.claudiu.bookmanagement.repository.BookRepository;
 import com.sda.claudiu.bookmanagement.service.exceptions.EntityNotFoundException;
 import com.sda.claudiu.bookmanagement.service.exceptions.InvalidParameterException;
 
+import java.util.List;
 import java.util.Optional;
 
 public class BookServiceImpl implements BookService {
@@ -40,5 +41,10 @@ public class BookServiceImpl implements BookService {
         Book book = new Book(title, description);   // create the book with title and description
         book.setAuthor(author);                     // connect the book with author to provide id, and this it makes with set
         bookRepository.create(book);                // create the book in the database
+    }
+
+    @Override
+    public List<Book> getAllBooks() {
+        return bookRepository.findAll();
     }
 }
