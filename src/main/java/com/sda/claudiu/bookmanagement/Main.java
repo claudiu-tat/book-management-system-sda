@@ -2,10 +2,14 @@ package com.sda.claudiu.bookmanagement;
 
 import com.sda.claudiu.bookmanagement.controller.AuthorController;
 import com.sda.claudiu.bookmanagement.controller.BookController;
+import com.sda.claudiu.bookmanagement.controller.BookReviewController;
 import com.sda.claudiu.bookmanagement.menu.UserOption;
+import com.sda.claudiu.bookmanagement.model.BookReview;
 import com.sda.claudiu.bookmanagement.repository.AuthorRepositoryImpl;
 import com.sda.claudiu.bookmanagement.repository.BookRepositoryImpl;
+import com.sda.claudiu.bookmanagement.repository.BookReviewRepositoryImpl;
 import com.sda.claudiu.bookmanagement.service.AuthorServiceImpl;
+import com.sda.claudiu.bookmanagement.service.BookReviewServiceImpl;
 import com.sda.claudiu.bookmanagement.service.BookServiceImpl;
 import com.sda.claudiu.bookmanagement.utils.SessionManager;
 
@@ -16,7 +20,7 @@ public class Main {
         SessionManager.getSessionFactory();
         AuthorController authorController = new AuthorController(new AuthorServiceImpl(new AuthorRepositoryImpl()));
         BookController bookController = new BookController(new BookServiceImpl(new BookRepositoryImpl(), new AuthorRepositoryImpl()));
-
+        BookReviewController bookReview = new BookReviewController(new BookReviewServiceImpl(new BookReviewRepositoryImpl(), new BookRepositoryImpl()));
         Scanner scanner = new Scanner(System.in);
 
         UserOption userOption = UserOption.UNKNOWN;
@@ -48,6 +52,9 @@ public class Main {
                     break;
                 case SHOW_ALL_BOOKS:
                     bookController.showAllBooks();
+                    break;
+                case CREATE_BOOK_REVIEW:
+                    bookReview.createBookReview();
                     break;
                 case EXIT:
                     System.out.println("Good bye!");

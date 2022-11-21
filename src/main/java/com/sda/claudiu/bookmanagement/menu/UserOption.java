@@ -7,6 +7,7 @@ public enum UserOption {
     DELETE_AUTHOR(4, "Delete author"),
     CREATE_BOOK(5, "Create book"),
     SHOW_ALL_BOOKS(6,"Display all books"),
+    CREATE_BOOK_REVIEW(7, "Create book review"),
     EXIT(99, "Exit"),
     UNKNOWN(100, "Unknown option");
 
