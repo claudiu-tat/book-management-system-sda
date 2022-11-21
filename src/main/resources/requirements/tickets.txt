@@ -22,24 +22,24 @@ of the author first name and last name. The system should validate the first nam
 
 DONE - BMS-4: As a user I should be able to delete an existing author by providing the id of the author that should be deleted.
 
-BMS-5: As a user I should be able to add a new book in the system by providing the book title, description and author id.
+DONE - BMS-5: As a user I should be able to add a new book in the system by providing the book title, description and author id.
 The system should validate the book title and description to not be empty or blank. The system should generate a
 new unique identification number. In case author id doesn't exist in the system, the system will show an error message.
 
 BMS-6: As a user I should be able to view all the books. Existing books should be listed on the screen.
 Each line should show the book id, title, description, author full name.
 
-BMS-7: As a user I should be able to update an existing book by providing the id of the book and new values of title,
+HOMEWORK - BMS-7: As a user I should be able to update an existing book by providing the id of the book and new values of title,
 description and author id. The system should validate the book title and description to not be empty or blank.
 In case author id doesn't exist in the system, the system will show an error message.
 
-BMS-8: As a user I should be able to delete an existing book by providing the id of the book that should be deleted.
+HOMEWORK - BMS-8: As a user I should be able to delete an existing book by providing the id of the book that should be deleted.
 
 BMS-9: As a user I should be able to add a new review on a book by providing the book id, score and comment.
 The system should validate the score to be between 1 and 5. The system should validate the comment also to not be
 empty or blank. In case book id doesn't exist in the system, the system will show an error message.
 
-BMS-10: As a user I should be able to view all the reviews in a list. Each line should contain the book title, score
+??? BMS-10: As a user I should be able to view all the reviews in a list. Each line should contain the book title, score
 and comment.
 
 BMS-11: As a user I should be able to view all the reviews for a given book title.
