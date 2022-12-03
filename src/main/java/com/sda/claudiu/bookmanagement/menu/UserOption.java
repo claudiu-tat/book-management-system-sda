@@ -8,6 +8,7 @@ public enum UserOption {
     CREATE_BOOK(5, "Create book"),
     SHOW_ALL_BOOKS(6,"Display all books"),
     UPDATE_BOOK(7, "Update book"),
+    DELETE_BOOK(8, "Delete book"),
     CREATE_BOOK_REVIEW(9, "Create book review"),
     SHOW_ALL_REVIEWS(10, "Display all reviews"),
     IMPORT_AUTHORS(12, "Import csv file with authors"),

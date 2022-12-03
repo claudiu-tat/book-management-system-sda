@@ -9,5 +9,6 @@ import java.util.List;
 public interface BookService {
     void createBook(String title, String description, int authorId) throws InvalidParameterException, EntityNotFoundException;
     void updateBook(int bookId, String bookTitle, String description, int authorId) throws InvalidParameterException, EntityNotFoundException;
+    void deleteBook(int bookId) throws InvalidParameterException, EntityNotFoundException;
     List<Book> getAllBooks();
 }

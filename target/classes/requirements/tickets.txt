@@ -29,7 +29,7 @@ new unique identification number. In case author id doesn't exist in the system,
 DONE - BMS-6: As a user I should be able to view all the books. Existing books should be listed on the screen.
 Each line should show the book id, title, description, author full name.
 
-HOMEWORK - BMS-7: As a user I should be able to update an existing book by providing the id of the book and new values of title,
+DONE - BMS-7: As a user I should be able to update an existing book by providing the id of the book and new values of title,
 description and author id. The system should validate the book title and description to not be empty or blank.
 In case author id doesn't exist in the system, the system will show an error message.
 

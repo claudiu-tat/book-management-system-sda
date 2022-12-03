@@ -44,15 +44,15 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void updateBook(int bookId, String bookTitle, String descritption, int authorId) throws InvalidParameterException, EntityNotFoundException {
+    public void updateBook(int bookId, String bookTitle, String description, int authorId) throws InvalidParameterException, EntityNotFoundException {
         if (bookId < 1) {
             throw new InvalidParameterException("Provided value for book id: " + bookId + " is invalid!");
         }
         if (bookTitle == null || bookTitle.isBlank() || bookTitle.length() < 2) {
             throw new InvalidParameterException("Provided value for book title: " + bookTitle + " is invalid!");
         }
-        if (descritption == null || descritption.isBlank() || descritption.length() < 10) {
-            throw new InvalidParameterException("Provided value for book description: " + descritption + " is invalid!");
+        if (description == null || description.isBlank() || description.length() < 10) {
+            throw new InvalidParameterException("Provided value for book description: " + description + " is invalid!");
         }
         if (authorId < 1) {
             throw new InvalidParameterException("Provided value for author id: " + authorId + " is invalid!");
@@ -68,6 +68,22 @@ public class BookServiceImpl implements BookService {
         book.setTitle(bookTitle);           // set the new values
 
         bookRepository.update(book);        // update the title of a new book
+    }
+
+    @Override
+    public void deleteBook(int bookId) throws InvalidParameterException, EntityNotFoundException {
+        if (bookId < 1) {
+            throw new InvalidParameterException("Provided value for book id: " + bookId + " is invalid!");
+        }
+        Optional<Book> bookOptional = bookRepository.findById(bookId);      // find the book by id
+        if (bookOptional.isEmpty()) {                                       // validate if exists
+            throw new EntityNotFoundException("Book with id: " + bookId + " was not found!");
+        }
+
+        Book book = bookOptional.get();     // get and store the value on a book variable
+
+        bookRepository.delete(book);
+
     }
 
     @Override
