@@ -4,7 +4,6 @@ import com.sda.claudiu.bookmanagement.controller.AuthorController;
 import com.sda.claudiu.bookmanagement.controller.BookController;
 import com.sda.claudiu.bookmanagement.controller.BookReviewController;
 import com.sda.claudiu.bookmanagement.menu.UserOption;
-import com.sda.claudiu.bookmanagement.model.BookReview;
 import com.sda.claudiu.bookmanagement.repository.AuthorRepositoryImpl;
 import com.sda.claudiu.bookmanagement.repository.BookRepositoryImpl;
 import com.sda.claudiu.bookmanagement.repository.BookReviewRepositoryImpl;
@@ -16,6 +15,7 @@ import com.sda.claudiu.bookmanagement.utils.SessionManager;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         SessionManager.getSessionFactory();
         AuthorController authorController = new AuthorController(new AuthorServiceImpl(new AuthorRepositoryImpl()));
@@ -56,6 +56,8 @@ public class Main {
                 case CREATE_BOOK_REVIEW:
                     bookReview.createBookReview();
                     break;
+                case IMPORT_AUTHORS:
+                    authorController.importAuthors();
                 case EXIT:
                     System.out.println("Good bye!");
                     break;

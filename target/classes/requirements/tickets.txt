@@ -35,14 +35,14 @@ In case author id doesn't exist in the system, the system will show an error mes
 
 HOMEWORK - BMS-8: As a user I should be able to delete an existing book by providing the id of the book that should be deleted.
 
-BMS-9: As a user I should be able to add a new review on a book by providing the book title, score and comment.
+DONE - BMS-9: As a user I should be able to add a new review on a book by providing the book title, score and comment.
 The system should validate the score to be between 1 and 5. The system should validate the comment also to not be
-empty or blank. In case book id doesn't exist in the system, the system will show an error message.
+empty or blank. In case book title doesn't exist in the system, the system will show an error message.
 
-??? BMS-10: As a user I should be able to view all the reviews in a list. Each line should contain the book title, score
+HOMEWORK - BMS-10: As a user I should be able to view all the reviews in a list. Each line should contain the book title, score
 and comment.
 
-BMS-11: As a user I should be able to view all the reviews for a given book title.
+??? BMS-11: As a user I should be able to view all the reviews for a given book title.
 In case the book title doesn't exist in the system, the system will show an error message.
 
 BMS-12: As a user I should be able to import CSV files with existing data for authors, books and reviews.
