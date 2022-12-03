@@ -7,9 +7,10 @@ public enum UserOption {
     DELETE_AUTHOR(4, "Delete author"),
     CREATE_BOOK(5, "Create book"),
     SHOW_ALL_BOOKS(6,"Display all books"),
-    CREATE_BOOK_REVIEW(7, "Create book review"),
-    SHOW_ALL_REVIEWS(8, "Display all reviews"),
-    IMPORT_AUTHORS(10, "Import csv file with authors"),
+    UPDATE_BOOK(7, "Update book"),
+    CREATE_BOOK_REVIEW(9, "Create book review"),
+    SHOW_ALL_REVIEWS(10, "Display all reviews"),
+    IMPORT_AUTHORS(12, "Import csv file with authors"),
     EXIT(99, "Exit"),
     UNKNOWN(100, "Unknown option");
 
