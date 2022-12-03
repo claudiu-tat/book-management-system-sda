@@ -24,6 +24,7 @@ public class BookReviewController {
             String comment = scanner.nextLine();
 
             bookReviewService.createBookReview(bookTitle, score, comment);
+            System.out.println("Book review was created!");
         } catch (InvalidParameterException e) {
             System.out.println(e.getMessage());
         } catch (EntityNotFoundException e) {
@@ -33,5 +34,12 @@ public class BookReviewController {
         } catch (Exception e) {
             System.out.println("Internal system error!");
         }
+    }
+
+    public void viewAllReviews() {
+        bookReviewService.viewAllReviews().stream().forEach(bookReview ->
+                System.out.println("Book title: " + bookReview.getBook()
+                    + " score: " + bookReview.getScore()
+                    + " comment: " + bookReview.getComment()));
     }
 }

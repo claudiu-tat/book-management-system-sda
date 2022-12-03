@@ -56,6 +56,9 @@ public class Main {
                 case CREATE_BOOK_REVIEW:
                     bookReview.createBookReview();
                     break;
+                case SHOW_ALL_REVIEWS:
+                    bookReview.viewAllReviews();
+                    break;
                 case IMPORT_AUTHORS:
                     authorController.importAuthors();
                 case EXIT:

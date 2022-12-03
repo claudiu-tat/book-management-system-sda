@@ -7,6 +7,7 @@ import com.sda.claudiu.bookmanagement.repository.BookReviewRepository;
 import com.sda.claudiu.bookmanagement.service.exceptions.EntityNotFoundException;
 import com.sda.claudiu.bookmanagement.service.exceptions.InvalidParameterException;
 
+import java.util.List;
 import java.util.Optional;
 
 public class BookReviewServiceImpl implements BookReviewService {
@@ -40,5 +41,10 @@ public class BookReviewServiceImpl implements BookReviewService {
         bookReview.setBook(book);
 
         bookReviewRepository.create(bookReview);
+    }
+
+    @Override
+    public List<BookReview> viewAllReviews() {
+        return bookReviewRepository.findAll();
     }
 }

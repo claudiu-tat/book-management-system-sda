@@ -39,10 +39,10 @@ DONE - BMS-9: As a user I should be able to add a new review on a book by provid
 The system should validate the score to be between 1 and 5. The system should validate the comment also to not be
 empty or blank. In case book title doesn't exist in the system, the system will show an error message.
 
-HOMEWORK - BMS-10: As a user I should be able to view all the reviews in a list. Each line should contain the book title, score
+DONE - BMS-10: As a user I should be able to view all the reviews in a list. Each line should contain the book title, score
 and comment.
 
-??? BMS-11: As a user I should be able to view all the reviews for a given book title.
+HOMEWORK - BMS-11: As a user I should be able to view all the reviews for a given book title.
 In case the book title doesn't exist in the system, the system will show an error message.
 
 DORE - BMS-12: As a user I should be able to import CSV files with existing data for authors, books and reviews.
