@@ -13,4 +13,6 @@ public class BookReviewRepositoryImpl extends BaseRepositoryImpl<BookReview> imp
     public BookReviewRepositoryImpl() {
         super(BookReview.class);
     }
+
+
 }

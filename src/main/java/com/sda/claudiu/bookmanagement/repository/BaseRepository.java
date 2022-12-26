@@ -6,6 +6,8 @@ import java.util.Optional;
 public interface BaseRepository<T> {
     Optional<T> findById(Integer id);
 
+    Optional<T> findByTitle(String title);
+
     void create(T entity);
 
     void update(T entity);

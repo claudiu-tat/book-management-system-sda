@@ -86,6 +86,7 @@ public class BookController {
                                         + " title " + book.getTitle()
                                         + " author " + book.getAuthor().getFirstName()
                                         + " " + book.getAuthor().getLastName()
+                                        + " author id " + book.getAuthor().getId()
                         )
                 );
     }

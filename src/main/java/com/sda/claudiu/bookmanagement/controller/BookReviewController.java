@@ -39,7 +39,24 @@ public class BookReviewController {
     public void viewAllReviews() {
         bookReviewService.viewAllReviews().stream().forEach(bookReview ->
                 System.out.println("Book title: " + bookReview.getBook()
-                    + " score: " + bookReview.getScore()
-                    + " comment: " + bookReview.getComment()));
+                        + " score: " + bookReview.getScore()
+                        + " comment: " + bookReview.getComment()));
+    }
+
+    public void viewAllReviewsOfAGivenBook() {
+        try {
+            System.out.println("Please insert book title: ");
+            String title = scanner.nextLine();
+
+            System.out.println(bookReviewService.viewAllReviewOfAGivenBook(title));
+        } catch (InvalidParameterException e) {
+            System.out.println(e.getMessage());
+        } catch (EntityNotFoundException e) {
+            System.out.println(e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Please insert a numeric value for score!");
+        /*} catch (Exception e) {
+            System.out.println("Internal system error!");*/
+        }
     }
 }

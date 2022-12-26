@@ -63,9 +63,21 @@ public class BookServiceImpl implements BookService {
             throw new EntityNotFoundException("Book with id: " + bookId + " was not found!");
         }
 
+
+
         Book book = bookOptional.get();     // get and store the value on a book variable
 
         book.setTitle(bookTitle);           // set the new values
+        book.setDescription(description);
+
+        Optional<Author> authorOptional = authorRepository.findById(authorId);  // check is author id is valid
+        if (authorOptional.isEmpty()) {
+            throw new EntityNotFoundException("Author with provided id " + authorId + " was not found!");
+        }
+
+        Author author = authorOptional.get();
+        book.setAuthor(author);
+        author.setId(authorId);
 
         bookRepository.update(book);        // update the title of a new book
     }

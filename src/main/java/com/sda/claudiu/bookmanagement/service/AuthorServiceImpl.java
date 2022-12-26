@@ -32,12 +32,12 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public void updateAuthor(int authorId, String fistName, String lastName) throws InvalidParameterException, EntityNotFoundException {
+    public void updateAuthor(int authorId, String firstName, String lastName) throws InvalidParameterException, EntityNotFoundException {
         if (authorId < 1) {
             throw new InvalidParameterException("Provided value for author id: " + authorId + " is invalid!");
         }
-        if (fistName == null || fistName.isBlank() || fistName.length() < 3) {
-            throw new InvalidParameterException("Provided value for first name: " + fistName + " is invalid!");
+        if (firstName == null || firstName.isBlank() || firstName.length() < 3) {
+            throw new InvalidParameterException("Provided value for first name: " + firstName + " is invalid!");
         }
         if (lastName == null || lastName.isBlank() || lastName.length() < 3) {
             throw new InvalidParameterException("Provided value for last name: " + lastName + " is invalid!");
@@ -47,9 +47,9 @@ public class AuthorServiceImpl implements AuthorService {
             throw new EntityNotFoundException("Author with id: " + authorId + " was not found!");
         }
 
-        Author author = authorOptional.get(); // here we take out after we found it
+        Author author = authorOptional.get(); // here we take out after we found it and store it in a variable
 
-        author.setFirstName(fistName); // set new values
+        author.setFirstName(firstName); // set new values
         author.setLastName(lastName);
 
         authorRepository.update(author); // update made

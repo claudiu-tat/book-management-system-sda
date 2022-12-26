@@ -9,4 +9,5 @@ import java.util.List;
 public interface BookReviewService {
     void createBookReview(String bookTitle, int score, String comment) throws InvalidParameterException, EntityNotFoundException;
     List<BookReview> viewAllReviews();
+    List<BookReview> viewAllReviewOfAGivenBook(String title) throws InvalidParameterException, EntityNotFoundException;
 }

@@ -26,6 +26,17 @@ public class BaseRepositoryImpl<T> implements BaseRepository <T> {
     }
 
     @Override
+    public Optional<T> findByTitle(String title) {
+        try (Session session = SessionManager.getSessionFactory().openSession()) {
+            T entity = session.find(entityClass, title);
+            return Optional.ofNullable(entity);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Optional.empty();
+        }
+    }
+
+    @Override
     public void create(T entity) {
         Transaction transaction = null;
 

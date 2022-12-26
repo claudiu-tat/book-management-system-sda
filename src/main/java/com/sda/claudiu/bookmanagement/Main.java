@@ -65,6 +65,9 @@ public class Main {
                 case SHOW_ALL_REVIEWS:
                     bookReview.viewAllReviews();
                     break;
+                case SHOW_ALL_REVIEWS_OF_A_GIVEN_BOOK:
+                    bookReview.viewAllReviewsOfAGivenBook();
+                    break;
                 case IMPORT_AUTHORS:
                     authorController.importAuthors();
                 case EXIT:
