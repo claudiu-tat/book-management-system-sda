@@ -55,8 +55,9 @@ public class BookReviewController {
             System.out.println(e.getMessage());
         } catch (NumberFormatException e) {
             System.out.println("Please insert a numeric value for score!");
-        /*} catch (Exception e) {
-            System.out.println("Internal system error!");*/
+        } catch (Exception e) {
+            System.out.println("Internal system error!");
         }
+
     }
 }

@@ -50,16 +50,18 @@ public class BookReviewServiceImpl implements BookReviewService {
 
     @Override
     public List<BookReview> viewAllReviewOfAGivenBook(String title) throws InvalidParameterException, EntityNotFoundException {
-
         if (title == null || title.isBlank() || title.length() < 3) {
             throw new InvalidParameterException("Provided title: " + title + " not valid");
         }
 
         Optional<Book> bookOptional = bookRepository.findByTitle(title);
-
+        if (bookOptional.isEmpty()) {
+            throw new EntityNotFoundException("Book not found for title: " + title);
+        }
         Book book = bookOptional.get();
         List<BookReview> bookReviews = book.getReviews();
+        book.setReviews(bookReviews);
 
-        return bookReviews;
+        return bookReviewRepository.findAll();
     }
 }
