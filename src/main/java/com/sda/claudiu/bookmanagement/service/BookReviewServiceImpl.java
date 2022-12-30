@@ -62,6 +62,6 @@ public class BookReviewServiceImpl implements BookReviewService {
         List<BookReview> bookReviews = book.getReviews();
         book.setReviews(bookReviews);
 
-        return bookReviewRepository.findAll();
+        return bookReviewRepository.findReviewsByAGivenTitle(title);
     }
 }

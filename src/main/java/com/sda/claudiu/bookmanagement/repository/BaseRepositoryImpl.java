@@ -1,14 +1,16 @@
 package com.sda.claudiu.bookmanagement.repository;
 
+import com.sda.claudiu.bookmanagement.model.BookReview;
 import com.sda.claudiu.bookmanagement.utils.SessionManager;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class BaseRepositoryImpl<T> implements BaseRepository <T> {
+public class BaseRepositoryImpl<T> implements BaseRepository<T> {
     private Class<T> entityClass;
 
     public BaseRepositoryImpl(Class<T> entityClass) {
@@ -80,7 +82,8 @@ public class BaseRepositoryImpl<T> implements BaseRepository <T> {
     }
 
     @Override
-    public void delete(T entity) {Transaction transaction = null;
+    public void delete(T entity) {
+        Transaction transaction = null;
 
         try (Session session = SessionManager.getSessionFactory().openSession()) {
 
@@ -110,3 +113,4 @@ public class BaseRepositoryImpl<T> implements BaseRepository <T> {
         }
     }
 }
+
