@@ -55,6 +55,7 @@ public class AuthorController {
         try {
             System.out.println("Please insert an author id: ");
             int authorId = Integer.parseInt(scanner.nextLine());
+
             authorService.deleteAuthor(authorId);
             System.out.println("Author was deleted!");
         } catch (InvalidParameterException e) {
@@ -71,6 +72,7 @@ public class AuthorController {
     public void importAuthors() {
         try {
             System.out.println("Authors import started!");
+            
             authorService.importAuthors();
             System.out.println("Authors import finished!");
         } catch (IOException e) {

@@ -3,7 +3,6 @@ package com.sda.claudiu.bookmanagement.controller;
 import com.sda.claudiu.bookmanagement.service.BookReviewService;
 import com.sda.claudiu.bookmanagement.service.exceptions.EntityNotFoundException;
 import com.sda.claudiu.bookmanagement.service.exceptions.InvalidParameterException;
-
 import java.util.Scanner;
 
 public class BookReviewController {
@@ -58,6 +57,5 @@ public class BookReviewController {
         } catch (Exception e) {
             System.out.println("Internal system error!");
         }
-
     }
 }

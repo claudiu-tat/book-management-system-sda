@@ -14,7 +14,6 @@ import java.util.Optional;
 
 public class AuthorServiceImpl implements AuthorService {
     private final AuthorRepository authorRepository;
-
     public AuthorServiceImpl(AuthorRepository authorRepository) {
         this.authorRepository = authorRepository;
     }
@@ -48,7 +47,6 @@ public class AuthorServiceImpl implements AuthorService {
         }
 
         Author author = authorOptional.get(); // here we take out after we found it and store it in a variable
-
         author.setFirstName(firstName); // set new values
         author.setLastName(lastName);
 

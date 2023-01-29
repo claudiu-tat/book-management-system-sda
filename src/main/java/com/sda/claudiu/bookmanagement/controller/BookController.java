@@ -49,7 +49,6 @@ public class BookController {
 
             bookService.updateBook(bookId, bookTitle, description, authorId);
             System.out.println("Book was updated!");
-
         } catch (InvalidParameterException e) {
             System.out.println(e.getMessage());
         } catch (EntityNotFoundException e) {
@@ -65,6 +64,7 @@ public class BookController {
         try {
             System.out.println("Please insert a book id: ");
             int bookId = Integer.parseInt(scanner.nextLine());
+
             bookService.deleteBook(bookId);
             System.out.println("Book was deleted!");
         } catch (InvalidParameterException e) {

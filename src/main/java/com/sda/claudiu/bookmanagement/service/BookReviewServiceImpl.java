@@ -60,8 +60,10 @@ public class BookReviewServiceImpl implements BookReviewService {
         }
         Book book = bookOptional.get();
         List<BookReview> bookReviews = book.getReviews();
-        book.setReviews(bookReviews);
+        if(bookReviews.isEmpty()){
+            throw new EntityNotFoundException("Reviews not found for the book: " + title);
+        }
 
-        return bookReviewRepository.findReviewsByAGivenTitle(title);
+        return bookReviews;
     }
 }

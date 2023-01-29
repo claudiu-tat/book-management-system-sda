@@ -6,5 +6,4 @@ import java.util.List;
 
 public interface BookReviewRepository extends BaseRepository<BookReview>{
     List<BookReview> findReviewsByAGivenTitle(String title);
-
 }

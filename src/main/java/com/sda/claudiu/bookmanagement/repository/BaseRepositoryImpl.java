@@ -12,7 +12,6 @@ import java.util.Optional;
 
 public class BaseRepositoryImpl<T> implements BaseRepository<T> {
     private Class<T> entityClass;
-
     public BaseRepositoryImpl(Class<T> entityClass) {
         this.entityClass = entityClass;
     }

@@ -63,10 +63,7 @@ public class BookServiceImpl implements BookService {
             throw new EntityNotFoundException("Book with id: " + bookId + " was not found!");
         }
 
-
-
         Book book = bookOptional.get();     // get and store the value on a book variable
-
         book.setTitle(bookTitle);           // set the new values
         book.setDescription(description);
 
